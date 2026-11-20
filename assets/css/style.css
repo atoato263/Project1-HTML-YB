@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+/* :root {
+  --font-heading: "Sen", sans-serif;
+  --primary-color: #ffb900;
+} */
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+/*========common=======những thứ dùng chung cho cả trang */
+
+a {
+  text-decoration: none;
+}
+.main-content {
+  width: 1170px;
+  /* calc giúp co ko bị sát lề hay mất phần tử sớm */
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn {
+  display: inline-block;
+  padding: 0 16px;
+  line-height: 50px;
+  background-color: #171100;
+  color: #fff;
+  min-width: 118px;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 24.5px;
+}
+/*========header=======những thứ dùng chung cho cả trang */
+.header {
+  background: #fffcf4;
+}
+.header.fixed {
+  position: sticky;
+  top: -28px;
+}
+.header .body {
+  display: flex;
+  align-items: center;
+  padding: 36px 0px 8px;
+}
+.nav {
+  margin-left: auto;
+}
+.nav ul {
+  display: flex;
+}
+.nav a {
+  position: relative;
+  color: #5f5b53;
+  font-size: 16px;
+  /* margin: 42px; margin hay padding đêu oke, nhưng dùng padding để di chuột gần đến thì sẽ hiện bàn tay rồi*/
+  padding: 8px 21px;
+}
+.nav li.active a,
+.nav a:hover {
+  color: #171100;
+  text-shadow: 1px 0 0 currentColor;
+}
+.nav li.active a::after {
+  position: absolute;
+  left: 21px;
+  bottom: 6px;
+  display: block;
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #171100;
+}
+.header .btn-sign-up {
+  min-width: 144px;
+}
+.header .action {
+  margin-left: 49px;
+}
